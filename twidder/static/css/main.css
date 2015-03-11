@@ -1,0 +1,70 @@
+
+html {
+	background: url('/img/background.jpg') no-repeat;
+}
+body {
+	background:transparent;
+}
+
+#app-container {
+	width:500px;
+	min-height:480px;
+	margin:0 auto;
+	margin-top:70px;
+	background:#ffffff;
+	border-radius:3px;
+	box-shadow:0 0 6px rgba(0, 0, 0, .3);
+}
+
+#login-view-header {
+	text-align:center;
+	margin-top:40px;
+
+	background-color:#FFFFFF;
+	background-image: -webkit-linear-gradient(top, #FFFFFF, #F9F9F9);
+	background-image: linear-gradient(to bottom, #FFFFFF, #F9F9F9);
+
+	padding:7px;
+	border-top-left-radius:3px;
+	border-top-right-radius:3px;
+	border-bottom:1px solid #E5E5E5;
+	text-shadow:0 1px 0 rgba(255, 255, 255, 1);
+	font-family: 'Dancing Script', cursive;
+	font-size:58px;
+	color:#4EA8D7;
+}
+
+#register-view-form {
+	padding:10px 70px;
+}
+
+.initial-loading {
+	display:block;
+	text-align:center;
+	width:100%;
+	line-height:450px;
+}
+
+
+/* Utility methods */
+.inline-text-center {
+	display:block;
+	text-align:center;
+}
+
+.margin-top-60 {
+	margin-top:60px;
+}
+
+.margin-top-40 {
+	margin-top:40px;
+}
+
+.margin-top-20 {
+	margin-top:20px;
+}
+
+.fill-width {
+	display:block;
+	width:100%;
+}

@@ -4,7 +4,10 @@ requirejs.config({
 		'jquery': 'libs/jquery-2.1.3',
 		'bootstrap': 'libs/bootstrap',
 		'backbone': 'libs/backbone',
-		'underscore': 'libs/underscore'
+		'underscore': 'libs/underscore',
+		'handlebars': 'libs/handlebars-v3.0.0',
+		'templates': '/templates',
+		'text': 'libs/text'
 	},
 	shim: {
 		'jquery': {
