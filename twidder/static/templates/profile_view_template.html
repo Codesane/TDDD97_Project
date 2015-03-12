@@ -5,7 +5,53 @@
 		</div>
 	</div>
 
-	<div id="profile-container" class="row">
-		
+	<div id="profile-container">
+		<h2 class="text-center">{{ user.firstname }} {{ user.familyname }}</h2>
+
+		<div class="profile-information row margin-top-40">
+			<div class="col-md-4 text-center">
+				<i class="fa fa-globe fa-2x"></i>
+				<h4>{{ user.city }}, {{ user.country }}</h4>
+			</div>
+			<div class="col-md-4 text-center">
+				<i class="fa {{ faGender user.gender }} fa-2x"></i>
+				<h4>{{ user.gender }}</h4>
+			</div>
+			<div class="col-md-4 text-center">
+				<i class="fa fa-envelope-o fa-2x"></i>
+				<h4>{{user.email}}</h4>
+			</div>
+		</div>
+
+		<br /><br />
+
+		<div class="form-group">
+			<label for="user-post-content">Message:</label>
+			<textarea id="user-post-content" class="form-control" placeholder="Share something amazing with the world."></textarea>
+		</div>
+		<button class="btn btn-primary btn-lg fill-width pull-right">Post Message</button>
+
+		<br />
+		<br />
+		<hr />
+
+		<div id="profile-posts">
+			{{#if posts.length}}
+				{{#each posts}}
+					<div class="post margin-top-20">
+						<h4 class="post-author">
+							{{ poster_email }}
+						</h4>
+						<div class="post-body">
+							<p>{{ message }}</p>
+						</div>
+					</div>
+				{{/each}}
+			{{else}}
+				<h4 class="text-center margin-top-60">You don't have any posts yet</h4><br />
+				<i class="inline-text-center no-posts">Why not write your own for the world to see?</i>
+				<div class="margin-top-60"></div>
+			{{/if}}
+		</div>
 	</div>
 </div>
