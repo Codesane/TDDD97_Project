@@ -7,11 +7,19 @@ requirejs.config({
 		'underscore': 'libs/underscore',
 		'handlebars': 'libs/handlebars-v3.0.0',
 		'templates': '/templates',
-		'text': 'libs/text'
+		'text': 'libs/text',
+		'jq.validate': 'libs/jquery.validate',
+		'jq.easing': 'libs/jquery.easing.1.3'
 	},
 	shim: {
 		'jquery': {
 			exports: '$'
+		},
+		'jq.validate': {
+			deps: [ 'jquery' ]
+		},
+		'jq.easing': {
+			deps: [ 'jquery' ]
 		},
 		'bootstrap': {
 			deps: [ 'jquery' ]
@@ -22,7 +30,10 @@ requirejs.config({
 		'app': {
 			deps: [
 				'bootstrap',
-				'backbone'
+				'backbone',
+				'jquery',
+				'jq.validate',
+				'jq.easing'
 			]
 		}
 	}

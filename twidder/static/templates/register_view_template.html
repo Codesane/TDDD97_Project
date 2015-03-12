@@ -1,39 +1,41 @@
-<h2 id="login-view-header">Twidder</h2>
-<h3 class="text-center">Register</h3>
+<h3 class="text-center"><i class="fa fa-laptop fa-2x"></i></h3>
 <br />
 <p class="inline-text-center"><i>Fill in the form below and take a leap into the world of Twidder.</i></p>
 
 <br />
 <form id="register-view-form">
 	<div class="form-group">
-		<input type="email" class="form-control" id="register-email" placeholder="First name">
+		<input type="text" class="form-control" id="first_name" placeholder="First name" name="first_name">
 	</div>
 	<div class="form-group">
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Family name">
-	</div>
-
-	<div class="form-group">
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		<input type="text" class="form-control" id="family_name" placeholder="Family name" name="family_name">
 	</div>
 
 	<div class="form-group">
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="City">
+		<select id="gender" class="form-control" name="gender">
+			<option value="Male" selected>Male</option>
+			<option value="Female">Female</option>
+		</select>
 	</div>
 
 	<div class="form-group">
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Country">
+		<input type="text" class="form-control" id="city" placeholder="City" name="city">
 	</div>
 
 	<div class="form-group">
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Email">
+		<input type="text" class="form-control" id="country" placeholder="Country" name="country">
 	</div>
 
 	<div class="form-group">
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		<input type="text" class="form-control" id="email" placeholder="Email" name="email">
 	</div>
 
 	<div class="form-group">
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat Password">
+		<input type="password" class="form-control" id="password" placeholder="Password" name="password">
+	</div>
+
+	<div class="form-group">
+		<input type="password" class="form-control" id="repeat_password" placeholder="Repeat Password" name="repeat_password">
 	</div>
 
 	<button type="submit" class="btn btn-primary fill-width pull-right">Register</button>

@@ -1,30 +1,41 @@
 define([
 	'backbone',
+	'views/WelcomeView',
 	'views/RegisterView',
-	'views/LoginView'
-], function(Backbone, RegisterView, LoginView) {
+	'views/LoginView',
+	'views/ProfileView'
+], function(Backbone, WelcomeView, RegisterView, LoginView, ProfileView) {
 
 	var AppRouter = Backbone.Router.extend({
+
+		initialize: function() {
+			this.welcomeView = new WelcomeView();
+		},
+
 		routes: {
 			'': 'register',
+			'login': 'login',
 			'register': 'register',
-			'login': 'login'
+			'profile': 'profile'
 		},
 
 		register: function() {
-			if(typeof this.registerView === 'undefined') {
-				this.registerView = new RegisterView();
-			}
-			this.registerView.render();
+			this.welcomeView.render({
+				page: 'register'
+			});
 		},
 
 		login: function() {
-			console.log('loginview');
-			if(typeof this.loginView === 'undefined') {
-				this.loginView = new LoginView();
-			}
-			this.loginView.render();
+			this.welcomeView.render({
+				page: 'login'
+			});
+		},
+
+		profile: function() {
+			var profileView = new ProfileView();
+			profileView.render();
 		}
+
 	});
 
 	return AppRouter;

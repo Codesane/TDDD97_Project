@@ -6,17 +6,16 @@ body {
 	background:transparent;
 }
 
-#app-container {
+
+/* Welcome View (Register, Login etc) */
+
+#welcome-view-container {
 	width:500px;
 	min-height:480px;
-	margin:0 auto;
-	margin-top:70px;
-	background:#ffffff;
-	border-radius:3px;
-	box-shadow:0 0 6px rgba(0, 0, 0, .3);
+	margin:70px auto;
 }
 
-#login-view-header {
+#welcome-view-header {
 	text-align:center;
 	margin-top:40px;
 
@@ -34,8 +33,14 @@ body {
 	color:#4EA8D7;
 }
 
-#register-view-form {
+#register-view-form, #login-view-form {
 	padding:10px 70px;
+}
+
+#register-successful-message {
+	color:#429B38;
+	text-align:center;
+	line-height:250px;
 }
 
 .initial-loading {
@@ -46,7 +51,69 @@ body {
 }
 
 
+
+/* Register/Login Form Validation styling */
+
+#welcome-view-container .error {
+	margin-top:5px;
+	color:rgb(207, 20, 20);
+	font-weight:normal;
+}
+
+/*  */
+
+
+/* ProfileView */
+#profile-view-container {
+	width:800px;
+	min-height:480px;
+	margin:180px auto 70px auto;
+	min-height:450px;
+	background:#ffffff;
+}
+
+#profile-image {
+	width:190px;
+	height:160px;
+	background:#ffffff;
+	position:relative;
+	margin-left:50%;
+	padding:5px;
+	left:-90px;
+	top:-120px;
+	box-shadow:0 0 6px rgba(0, 0, 0, .3);
+	border-radius:3px;
+}
+
+#profile-image img {
+	width:180px;
+	height:150px;
+}
+
+#profile-header-bar {
+	border-top-right-radius:inherit;
+	border-top-left-radius:inherit;
+	width:100%;
+	height:60px;
+
+	background-color: #F9F9F9;
+	background-image: -webkit-linear-gradient(top, #F9F9F9, #EFEFEF); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+	background-image:         linear-gradient(to bottom, #F9F9F9, #EFEFEF); /* Chrome 26, Firefox 16+, IE 10+, Opera */
+
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #D0D0D0;
+	box-shadow: inset 0 -2px 1px rgba(0, 0, 0, .1);
+}
+
 /* Utility methods */
+
+
+.view-container {
+	background:#ffffff;
+	border-radius:3px;
+	box-shadow:0 0 6px rgba(0, 0, 0, .3);
+}
+
 .inline-text-center {
 	display:block;
 	text-align:center;
