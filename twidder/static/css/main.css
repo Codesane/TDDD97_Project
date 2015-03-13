@@ -1,6 +1,12 @@
 
+html, body {
+	overflow-x: hidden;
+}
+
+
 html {
 	background: url('/img/background.jpg') no-repeat;
+	background-position: center;
 	background-attachment: fixed;
 }
 body {
@@ -94,7 +100,8 @@ body {
 #profile-header-bar {
 	border-top-right-radius:inherit;
 	border-top-left-radius:inherit;
-	width:100%;
+
+	width:800px;
 	height:60px;
 
 	background-color: #F9F9F9;
@@ -171,3 +178,68 @@ body {
 	display:block;
 	width:100%;
 }
+
+
+@media all and (max-width: 840px) {
+	body, html {
+		/* Large images load ridiculously  */
+		background: url('/img/background_small_1.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: top;
+	}
+
+	.view-container {
+		width:100%;
+		border-radius: none;
+		box-shadow: none;
+	}
+
+	#welcome-view-container,
+	#profile-view-container {
+		width:100%;
+		margin-bottom:0;
+	}
+
+	#welcome-view-container, #welcome-view-header {
+		margin:0;
+		border-radius:0px;
+	}
+
+	#profile-header-bar {
+		border-radius: 0px;
+		width:100%;
+	}
+
+	/* Overriding these styles when the size go way down. */
+	.container-fluid {
+		padding-left:0;
+		padding-right:0;
+	}
+
+
+	/* Profile specific */
+	.profile-information div {
+		margin-bottom:25px;
+	}
+
+	#register-view-form, #login-view-form {
+		max-width:460px;
+		margin: 0 auto;
+		padding:10px 30px;
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

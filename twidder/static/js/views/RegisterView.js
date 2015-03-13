@@ -105,25 +105,3 @@ define([
 
 	return RegisterView;
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

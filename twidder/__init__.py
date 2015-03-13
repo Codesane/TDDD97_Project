@@ -356,6 +356,34 @@ def get_user_posts_by_email(email):
 	return posts_to_json(user_messages)
 
 
+@app.route('/api/post', methods = ['POST'])
+def post_message_to_self():
+	json = request.get_json(force = True)
+	token = ''
+
+	if 'token' in request.cookies:
+		token = request.cookies['token']
+	else:
+		return bad_request()
+
+	message = json['message']
+
+	sess = get_session(token)
+	u_id = sess[1] if sess != None else None
+
+	if not u_id:
+		return forbidden()
+
+	db_helper.post_message_to_id(u_id, u_id, message)
+
+	response = {
+		'success': True,
+		'message': 'Your message was posted.'
+	}
+
+	return jsonify(response)
+
+
 @app.route('/api/post/<string:email>', methods = ['POST'])
 def post_message(email):
 	json = request.get_json(force = True)

@@ -6,18 +6,18 @@
 	</div>
 
 	<div id="profile-container">
-		<h2 class="text-center">{{ user.firstname }} {{ user.familyname }}</h2>
+		<h2 class="text-center margin-top-40">{{ user.firstname }} {{ user.familyname }}</h2>
 
 		<div class="profile-information row margin-top-40">
-			<div class="col-md-4 text-center">
+			<div class="col-sm-4 text-center">
 				<i class="fa fa-globe fa-2x"></i>
 				<h4>{{ user.city }}, {{ user.country }}</h4>
 			</div>
-			<div class="col-md-4 text-center">
+			<div class="col-sm-4 text-center">
 				<i class="fa {{ faGender user.gender }} fa-2x"></i>
 				<h4>{{ user.gender }}</h4>
 			</div>
-			<div class="col-md-4 text-center">
+			<div class="col-sm-4 text-center">
 				<i class="fa fa-envelope-o fa-2x"></i>
 				<h4>{{user.email}}</h4>
 			</div>
@@ -29,7 +29,7 @@
 			<label for="user-post-content">Message:</label>
 			<textarea id="user-post-content" class="form-control" placeholder="Share something amazing with the world."></textarea>
 		</div>
-		<button class="btn btn-primary btn-lg fill-width pull-right">Post Message</button>
+		<button id="user-post-message" class="btn btn-primary btn-lg fill-width pull-right" disabled=true>Post Message</button>
 
 		<br />
 		<br />
